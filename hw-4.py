@@ -58,10 +58,9 @@ with open('data.json', 'r') as r_file:
 r_file.close()
 
 
-
 with open(r'data.csv', 'w') as w_file:
     writer = csv.writer(w_file)
-    writer.writerow(['id', 'name', 'age', 'number'])
+    writer.writerow(['id', 'name', 'age', 'phone'])
     for i in new_data:
         writer.writerow(i)
 
