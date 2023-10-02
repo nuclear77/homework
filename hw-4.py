@@ -37,7 +37,7 @@
 import json
 import csv
 
-with open(r'data.json', 'r') as r_file:
+with open('data.json', 'r') as r_file:
     data = json.load(r_file)
     new_data = []
     number_1 =[375442312392, 37533231233, 375298426249,
