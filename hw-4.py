@@ -34,21 +34,41 @@
 #     json.dump(dictionary, file)
 
 # задача 4
-# import json
-# import csv
-#
-# with open("data.json", "r") as json_file:
-#     data = json.load(json_file)
-#
-# with open("data.csv", "w", newline="") as csv_file:
-#     writer = csv.writer(csv_file)
-#     writer.writerow(["id", "name", "age"])
-#     for id, (name, age) in data.items():
-#         writer.writerow([id, name, age, ""])
+import json
+import csv
+
+with open('data.json', 'r') as r_file:
+    data = json.load(r_file)
+    new_data = []
+    number_1 =[375442312392, 37533231233, 375298426249,
+               37525723951, 37544743321, 375446431432
+               ]
+    summ = ''
+    for id, value in data.items():
+        summ += id
+        count = 0
+        if len(summ) == 6:
+            summ = int(summ)
+            value.insert(0, summ)
+            summ = ''
+        value.insert(3, number_1[count])
+        count += 1
+        new_data.append(value)
+        print(summ)
+r_file.close()
+
+
+with open(r'data.csv', 'w') as w_file:
+    writer = csv.writer(w_file)
+    writer.writerow(['id', 'name', 'age', 'phone'])
+    for i in new_data:
+        writer.writerow(i)
+
+w_file.close()
 
 # задача 5 под вопросом
-import pandas as pd
+# import pandas as pd
 
-data = pd.read_csv('data.csv')
-data.drop(['age'], axis=1, inplace=True)
-data.to_excel('data.xlsx', index=False)
+# data = pd.read_csv('data.csv')
+# data.drop(['age'], axis=1, inplace=True)
+# data.to_excel('data.xlsx', index=False)
