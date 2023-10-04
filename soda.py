@@ -56,8 +56,8 @@ print(triangle1.is_triangle())
 #         return self.__kg * 2.205
 
 
-kgtopd1 = KgToPounds(10)
-print(kgtopd1.kg)
-kgtopd1.kg = 5
-print(kgtopd1.kg)
-print(kgtopd1.to_pounds())
+# kgtopd1 = KgToPounds(10)
+# print(kgtopd1.kg)
+# kgtopd1.kg = 5
+# print(kgtopd1.kg)
+# print(kgtopd1.to_pounds())
