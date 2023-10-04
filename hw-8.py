@@ -89,11 +89,7 @@ class Figure:
             print(p.Point())
         else:
             x = a[0] - a[1]
-            modul = x + 1
-            z = x % modul
-            if z > modul:
-                z -= modul
-            print(z)
+            print(x)
 
 
 class Point:
