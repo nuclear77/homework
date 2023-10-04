@@ -25,13 +25,13 @@ class TriangleChecker:
             print('треугольник можно построить')
         elif self.a or self.b or self.c < 0:
             print('с отрицательными нельзя')
-        elif self.a or self.b or self.c == str:
+        elif isinstance(str, int):
             print('строку нельзя')
         else:
             print('нельзя построить')
 
 
-triangle1 = TriangleChecker(2, 3, 4)
+triangle1 = TriangleChecker(1, 3, 4)
 
 print(triangle1.is_triangle())
 
