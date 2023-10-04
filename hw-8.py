@@ -90,7 +90,7 @@ class Figure:
             print(p.Point())
         else:
             x = a[0] - a[1]
-            modul = x + 2
+            modul = x + 1
             z = x % modul
             if z > modul:
                 z -= modul
@@ -103,9 +103,9 @@ class Point:
 
 
 p = Point()
-number = int(input('введите первый радиус'))
+number_1 = int(input('введите первый радиус'))
 number_2 = int(input('введите второй радиус'))
-c = Circle(number)
+c = Circle(number_1)
 c_1 = Circle(number_2)
 
 f = Figure()
