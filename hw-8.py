@@ -15,12 +15,12 @@
 #
 #     def stop(self):
 #         print("stop")
-
-
-# задача 2
+#
+#
+# # задача 2
 # class Truck(Auto):
 #     def __init__(self, brand, age, color, mark, weight, max_load):
-#         super().__init__ (brand, age, color, mark, weight)
+#         super().__init__(brand, age, color, mark, weight)
 #         self.max_load = max_load
 #
 #     def move(self):
@@ -32,7 +32,8 @@
 #         time.sleep(1)
 #         print("load")
 #         time.sleep(1)
-#
+
+
 # class Car(Auto):
 #     def __init__(self, brand, age, color, mark, weight, max_speed):
 #         super().__init__(brand, age, color, mark, weight)
@@ -41,6 +42,8 @@
 #     def move(self):
 #         super().move()
 #         print("max speed is", self.max_speed)
+#
+#
 # truck1 = Truck("Mercedes", 5, "Red", "Truck", 2000, 5000)
 # truck2 = Truck("Mini", 3, "Blue", "Truck", 3000, 7000)
 # truck1.move()
@@ -66,29 +69,45 @@
 
 # задача 3
 class Circle:
-    def __init__(self, x, y, radius):
-        self.x = x
-        self.y = y
-        self.radius = radius
+    def __init__(self, a):
+        self.radius = a
 
-    def subtract(self, other_circle):
-        if self.radius != other_circle.radius:
-            new_radius = abs(self.radius - other_circle.radius)
-            return Circle(self.x, self.y, new_radius)
+    def circle_area(self):
+        return 3.14 * self.radius ** 2
+
+
+class Figure:
+
+    def sub(self):
+        a = [c.circle_area(), c_1.circle_area()]
+        x = a[0] - a[1]
+        print(x)
+
+    def sub_m(self):
+        a = [c.radius, c_1.radius]
+
+        if a[0] == a[1]:
+            print(p.Point())
         else:
-            return Point(self.x, self.y)
+            x = a[0] - a[1]
+            modul = x + 2
+            z = x % modul
+            if z > modul:
+                z -= modul
+            print(z)
+
 
 class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+    def Point(self):
+        return '.'
 
-circle1 = Circle(0, 0, 5)
-circle2 = Circle(0, 0, 3)
-circle3 = Circle(0, 0, 5)
 
-result1 = circle1.subtract(circle2)
-result2 = circle1.subtract(circle3)
+p = Point()
+number = int(input('введите первый радиус'))
+number_2 = int(input('введите второй радиус'))
+c = Circle(number)
+c_1 = Circle(number_2)
 
-print(result1.radius)
-print(result2.x, result2.y)
+f = Figure()
+f.sub()
+f.sub_m()
