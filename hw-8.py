@@ -33,7 +33,6 @@
 #         print("load")
 #         time.sleep(1)
 
-
 # class Car(Auto):
 #     def __init__(self, brand, age, color, mark, weight, max_speed):
 #         super().__init__(brand, age, color, mark, weight)
