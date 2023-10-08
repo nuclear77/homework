@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 @dataclass
 class DataClass:
     def __init__(self, data):
