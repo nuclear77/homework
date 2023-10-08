@@ -17,7 +17,7 @@ DataClass.class_method()
 
 class MetaClass(type):
     def __new__(cls, name, bases, attrs):
-        attrs['new_attribute'] = "добавление нового аттрибута в метакласс"
+        attrs['new_atribute'] = "добавление нового атрибута в метакласс"
         return super().__new__(cls, name, bases, attrs)
 
 class MyClass(metaclass=MetaClass):
@@ -25,4 +25,4 @@ class MyClass(metaclass=MetaClass):
 
 obj2 = MyClass()
 
-print(obj2.new_attribute)
+print(obj2.new_atribute)
