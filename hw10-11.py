@@ -77,7 +77,6 @@ while True:
             except ZeroDivisionError:
                 print('На 0 делить нельзя')
 
-        raise CustomErr
 
     except ValueError:
         print('Ошибка')
