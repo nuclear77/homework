@@ -35,25 +35,49 @@
 #10
 while True:
     try:
-        a = float(input("введите первое число: "))
-        c = input("введите операцию (+, -, *, / : ")
-        b = float(input("введите второе число: "))
+        class CustomErr(Exception):
+            def __init__(self, *args):
+                if args:
+                    self.message = args[0]
+                else:
+                    self.message = None
+
+            def __str__(self):
+                print('былла введена строка')
+                if self.message:
+                    return 'CustomErr, {0} '.format(self.message)
+                else:
+                    return 'CustomErr была вызвана'
+
+
+        a = input("Введите первое число: ")
+        if not a.isdigit():
+            raise CustomErr("a должна быть числом")
+
+        c = input("Введите операцию (+, -, *, /): ")
+        if not any([c == '+', c == '-', c == '*', c == '/']):
+            raise CustomErr("c должна быть одной из операций: +, -, *, /")
+
+        b = input("Введите второе число: ")
+        if not b.isdigit():
+            raise CustomErr("b должна быть числом")
+
+        a = float(a)
+        b = float(b)
 
         if c == "+":
-            print("ответ: ", a + b)
+            print("Ответ: ", a + b)
         elif c == "-":
-            print("ответ: ", a - b)
+            print("Ответ: ", a - b)
         elif c == "*":
-            print("ответ: ", a * b)
+            print("Ответ: ", a * b)
         elif c == "/":
             try:
-                print("ответ: ", a / b)
+                print("Ответ: ", a / b)
             except ZeroDivisionError:
-                print('на 0 делить нельзя')
+                print('На 0 делить нельзя')
 
+        raise CustomErr
 
-
-    except ValueError as err:
-        print(f' ой, ошибочка {err}')
-
-
+    except ValueError:
+        print('Ошибка')
