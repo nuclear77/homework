@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Изменение цвета фона</title>
+    <script>
+        function generate_color() {
+            var colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function changeBackgroundColor() {
+            var color = generate_color();
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <h1>сменить цвет фона</h1>
+    <button onclick="changeBackgroundColor()">смена цвета</button>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моя страница</title>
+    <style>
+        body {
+            background-color: #F0F0F0;
+        }
+
+        .red {
+            background-color: #FF0000;
+        }
+
+        .blue {
+            background-color: #0000FF;
+        }
+
+        .green {
+            background-color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content red">
+        <h1>Страница 1</h1>
+        <p>Добро пожаловать на страницу 1!</p>
+    </div>
+
+    <div class="main-content blue">
+        <h1>Страница 2</h1>
+        <p>Добро пожаловать на страницу 2!</p>
+    </div>
+
+    <div class="main-content green">
+        <h1>Страница 3</h1>
+        <p>Добро пожаловать на страницу 3!</p>
+    </div>
+</body>
+</html>
