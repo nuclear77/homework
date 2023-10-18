@@ -1,17 +1,23 @@
 from flask import Flask, render_template
-import random
 
 app = Flask(__name__)
 
-
 @app.route('/')
+def about():
+    return render_template('about.html')
+
+@app.route('/contac')
+def user():
+    return render_template('contac.html')
+
+@app.route('/about')
 def index():
-    color = generate_color()
-    return render_template('index.html', color=color)
+    return render_template('index.html')
 
-def generate_color():
-    colors = ['red', 'blue', 'green', 'yellow', 'purple']
-    return random.choice(colors)
 
-if __name__ == '__main__':
-    app.run()
+@app.route('/negp')
+def life():
+    return render_template('negp.html')
+
+
+app.run(port=2023)
