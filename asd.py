@@ -7,7 +7,7 @@ def about():
     return render_template('about.html')
 
 @app.route('/contac')
-def сcontac():
+def сontac():
     return render_template('contac.html')
 
 @app.route('/about')
