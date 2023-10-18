@@ -7,7 +7,7 @@ def about():
     return render_template('about.html')
 
 @app.route('/contac')
-def user():
+def сcontac():
     return render_template('contac.html')
 
 @app.route('/about')
@@ -16,7 +16,7 @@ def index():
 
 
 @app.route('/negp')
-def life():
+def negp():
     return render_template('negp.html')
 
 
