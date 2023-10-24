@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendees</title>
+</head>
+<body>
+    <h1>Attendees for {{ event }}</h1>
+    <ul>
+        {% for attendee in attendees %}
+        <li>{{ attendee.name }} - {{ attendee.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
